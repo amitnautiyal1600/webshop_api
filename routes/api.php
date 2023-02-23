@@ -30,7 +30,7 @@ Route::post('/login', [RegisterController::class, 'loginUser']);
         
 Route::middleware('auth:sanctum')->group( function () {
 
-    Route::post('/logout', [RegisterController::class, 'loginUser']);
+    Route::post('/logout', [RegisterController::class, 'logoutUser']);
     Route::get('/import-customers', [RegisterController::class, 'importUsers']);
 
     // Products API Routes
