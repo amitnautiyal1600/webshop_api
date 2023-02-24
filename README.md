@@ -39,18 +39,31 @@ Below are the step to download this project
 ## Register Users  
 - POST 
 - http://127.0.0.1:8000/api/register
- 
+- Body : 
+	Form-data : 
+	- job_title
+	- name
+	- email
+	- phone
+	- password
 
  
 ## Login Users 
 - POST
 - http://127.0.0.1:8000/api/login
- 
+- Body : 
+	Form-data :  
+	- email
+	- password
 
 
 ## Import Customers/Users 
 - GET 
 - http://127.0.0.1:8000/api/import-customers
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token} 
+
 
 -- For importing customer we have placed the sample file inside public directory.
 
@@ -59,6 +72,9 @@ Below are the step to download this project
 ## Import Products
 - GET 
 - http://127.0.0.1:8000/api/import-products
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
 
 -- For importing Products we have placed the sample file inside public directory.
 
@@ -66,45 +82,90 @@ Below are the step to download this project
 ## Get Products
 - GET 
 - http://127.0.0.1:8000/api/get-products
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
 
 
 
 ## Add To Cart
 - POST 
-- http://127.0.0.1:8000/api/add-to-cart/?product_id=1
+- http://127.0.0.1:8000/api/add-to-cart
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
+	- product_id
+	- quantity
 
 
 
 ## Update Cart
 - POST 
-- http://127.0.0.1:8000/api/update-cart/?product_id=1&quantity=2
+- http://127.0.0.1:8000/api/update-cart
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data :
+	- product_id
+	- quantity 
 
 
 
 ## Delete Cart
 - POST 
-- http://127.0.0.1:8000/api/delete-cart/?product_id=1
+- http://127.0.0.1:8000/api/delete-cart
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
+	- product_id
 
 
 
 ## Get Cart Data
 - GET 
 - http://127.0.0.1:8000/api/get-cart-data
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
 
 
 ## Place Order
 - GET 
 - http://127.0.0.1:8000/api/place-order
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
 
 
 ## Get All Order Data
 - GET 
 - http://127.0.0.1:8000/api/get-order-data
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
 
 
 ## Logout
 - POST 
 - http://127.0.0.1:8000/api/logout
+- Header : 
+	Accept = application/json
+	Authorization = Bearer {token}
+	Body : 
+	Form-data : 
 
 
 
