@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class CartController extends Controller
 {
      /**
-    * Function to fetch products
+    * Function to add product in cart
     */
     public function addToCart(Request $request) {
         
@@ -61,7 +61,7 @@ class CartController extends Controller
     }
 
      /**
-    * Function to fetch products
+    * Function to update cart product quantity
     */
     public function UpdateCart(Request $request) {
         $product_id = $request->get('product_id');
@@ -106,7 +106,7 @@ class CartController extends Controller
     }
 
      /**
-    * Function to fetch products
+    * Function to delete cart product
     */
     public function deleteCart(Request $request) {
         $product_id = $request->get('product_id');
@@ -128,7 +128,7 @@ class CartController extends Controller
     }
 
      /**
-    * Function to fetch products
+    * Function to fetch all cart data for request user 
     */
     public function getCartData(Request $request) {
         $cart_data= Cart::select('product_id', 'quantity')->where('user_id', Auth::user()->id)->get()->toArray();
