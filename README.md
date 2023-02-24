@@ -29,9 +29,11 @@ Below are the step to download this project
 
 - Run php artisan serve
 
-- Now open postman (https://www.postman.com/downloads/) to test the API.
+- Now open postman(https://www.postman.com/downloads/) to test the API.
 
-_ please check the Api created in the Project
+# Please check the Api created in the Project listed Below.
+### Also prrject main directory contain a passport exported json file which you can import to get all the route and filled data.
+#### All Routes apart from login and registration are protected.
  
 
 ## Register Users  
