@@ -31,8 +31,8 @@ Below are the step to download this project
 
 - Now open postman(https://www.postman.com/downloads/) to test the API.
 
-# Please check the Api created in the Project listed Below.
-### Also prrject main directory contain a passport exported json file which you can import to get all the route and filled data.
+# Please check the API Endpoints created in the Project listed Below.
+### Also project main directory contain a passport exported json file which you can import to get all the route and filled data.
 #### All Routes apart from login and registration are protected.
  
 
@@ -43,7 +43,7 @@ Below are the step to download this project
 
  
 ## Login Users 
-- Post
+- POST
 - http://127.0.0.1:8000/api/login
  
 
@@ -52,12 +52,15 @@ Below are the step to download this project
 - GET 
 - http://127.0.0.1:8000/api/import-customers
 
+-- For importing customer we have placed the sample file inside public directory.
+
 
 
 ## Import Products
 - GET 
 - http://127.0.0.1:8000/api/import-products
 
+-- For importing Products we have placed the sample file inside public directory.
 
 
 ## Get Products
@@ -85,17 +88,17 @@ Below are the step to download this project
 
 
 ## Get Cart Data
-- POST 
+- GET 
 - http://127.0.0.1:8000/api/get-cart-data
 
 
 ## Place Order
-- POST 
+- GET 
 - http://127.0.0.1:8000/api/place-order
 
 
 ## Get All Order Data
-- POST 
+- GET 
 - http://127.0.0.1:8000/api/get-order-data
 
 
